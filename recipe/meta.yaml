@@ -10,7 +10,7 @@ source:
   sha256: 9e2a8a51e62c69bf43f62aadf527ca4312860de8a36c12a8747d3e8ae556f0b3
 
 build:
-  number: 0
+  number: 1
   run_exports: {{ pin_subpackage(name, max_pin="x.x.x") }}
   script:
     - {{ PYTHON }} -m pip install . -vv --config-settings="cmake.args=-DBUILD_GEMMI_PROGRAM=ON;-DUSE_ZLIB_NG=ON"
